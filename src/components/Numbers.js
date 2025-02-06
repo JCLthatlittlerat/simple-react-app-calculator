@@ -1,13 +1,19 @@
 import React from 'react'
-import OutputField from './OutputField';
-import InputField from './InputField';
-var result = 10;
+import Buttons from './Buttons'
+// import { useState } from 'react';
+var result=0;
 function Numbers() {
+  // const [number,setNumber] = React.useState(0);
+  var data = {
+    result:0,
+    number:0
+  }
   return (
     <div>
-        <OutputField props={result} />
-        <InputField/>
-        
+
+      <div>Result: {result}</div>
+       <input name='number' className='inputFieldArea' placeholder='Enter a number'/>
+      <Buttons props= {data} />
     </div>
   )
 }
