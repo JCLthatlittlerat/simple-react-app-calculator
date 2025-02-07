@@ -1,19 +1,59 @@
 import React from 'react'
 import Buttons from './Buttons'
-// import { useState } from 'react';
+import { useState } from 'react';
 var result=0;
 function Numbers() {
-  // const [number,setNumber] = React.useState(0);
-  var data = {
-    result:0,
-    number:0
+  const [number, setNumber] = useState(0);
+  // const add = (number,result) => { return result+=number;};
+  // const subtract = (number,result) => { return result-=number; };
+  // const multiply = (number,result) => { return result*=number; };
+  // const divide = (number,result) => { return result/=number; };
+function add ()
+{
+  setNumber(result+=number);
+}
+
+function subtract ()
+{
+  setNumber(result-=number);
+}
+
+function multiply ()
+{
+  setNumber(result*=number);
+}
+function divide ()
+{
+  setNumber(result/=number);
+}
+function resetInput ()
+{
+  setNumber(0)
+}
+
+function resetResult ()
+{
+  setNumber(result=0)
+}
+
+  // var data = {
+  //   result:0,
+  //   number:0
+    
+  // }
+  const handleChange = (event) =>{         
+    setNumber(Number(event.target.value));   //Convert  input ot a number because by default the value of input is string even though type="number"
   }
   return (
     <div>
-
       <div>Result: {result}</div>
-       <input name='number' className='inputFieldArea' placeholder='Enter a number'/>
-      <Buttons props= {data} />
+       <input type="number" value={number} onChange={handleChange} className='inputFieldArea' placeholder='Enter a number'/>
+      <Buttons label="add" onClick={add} />
+      <Buttons label="subtract" onClick={subtract} />
+      <Buttons label="divide" onClick={divide} />
+      <Buttons label="multiply" onClick={multiply} />
+      <Buttons label="resetInput" onClick={resetInput} />
+      <Buttons label="resetResult" onClick={resetResult} />
     </div>
   )
 }
