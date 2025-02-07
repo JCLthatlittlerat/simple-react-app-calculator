@@ -48,12 +48,14 @@ function resetResult ()
     <div>
       <div>Result: {result}</div>
        <input type="number" value={number} onChange={handleChange} className='inputFieldArea' placeholder='Enter a number'/>
-      <Buttons label="add" onClick={add} />
-      <Buttons label="subtract" onClick={subtract} />
-      <Buttons label="divide" onClick={divide} />
-      <Buttons label="multiply" onClick={multiply} />
-      <Buttons label="resetInput" onClick={resetInput} />
-      <Buttons label="resetResult" onClick={resetResult} />
+       <div className='Buttons'>
+        <Buttons label="add" onClick={add} />
+        <Buttons label="subtract" onClick={subtract} />
+        <Buttons label="divide" onClick={divide} />
+        <Buttons label="multiply" onClick={multiply} />
+        <Buttons label="resetInput" className="resetInput" onClick={resetInput} />
+        <Buttons label="resetResult" className="resetResult" onClick={resetResult} />
+       </div>
     </div>
   )
 }

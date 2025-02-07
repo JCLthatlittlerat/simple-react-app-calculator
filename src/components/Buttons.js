@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Buttons({label, onClick}) {
+function Buttons({label, onClick,className}) {
   
 
   return (
     <div>
-        <button onClick={onClick} className='addButton'>{label}</button>
+        <button onClick={onClick} className={className}>{label}</button>
     </div>
   )
 }

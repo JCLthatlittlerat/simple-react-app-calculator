@@ -1,1 +1,29 @@
+.App{
+    margin-top: -22px;
+    background: linear-gradient(to right, rgb(148, 67, 67), rgb(241, 134, 62));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Buttons{
+    margin-top: 5px;
+    display: flex;
+    column-gap: 5px;
+}
+.Button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.resetInput{
+    border: 1px solid black;
+    background: linear-gradient(to right, #fe864f, #feed00);
+    
+}
+.resetResult{
+    border: 1px solid black;
+    background: linear-gradient(to right, #fe864f, #feed00);
+    
+}
 
