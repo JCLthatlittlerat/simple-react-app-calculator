@@ -1,9 +1,12 @@
 import React from 'react'
 import Buttons from './Buttons'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 var result=0;
 function Numbers() {
   const [number, setNumber] = useState(0);
+  const inputRef = useState(null);
+  const resultRef = useRef(null);
+
   // const add = (number,result) => { return result+=number;};
   // const subtract = (number,result) => { return result-=number; };
   // const multiply = (number,result) => { return result*=number; };
@@ -26,14 +29,19 @@ function divide ()
 {
   setNumber(result/=number);
 }
-function resetInput ()
+function resetInput (e)
 {
-  setNumber(0)
+  e.preventDefault();  //I have no idea what this does
+  inputRef.current.value=0
+  // setNumber(0)
 }
 
-function resetResult ()
+function resetResult (e)
 {
-  setNumber(result=0)
+  e.preventDefault();
+  resultRef.current.value=0
+  // setNumber((result)=> result * 0)       this options didn't work because 'result' is not state.
+  // setNumber(result=0)
 }
 
   // var data = {
@@ -46,8 +54,8 @@ function resetResult ()
   }
   return (
     <div>
-      <div>Result: {result}</div>
-       <input type="number" value={number} onChange={handleChange} className='inputFieldArea' placeholder='Enter a number'/>
+      <div ref={resultRef} >Result: {result}</div>
+       <input ref={inputRef} type="number" value={number} onChange={handleChange} className='inputFieldArea' placeholder='Enter a number'/>
        <div className='Buttons'>
         <Buttons label="add" onClick={add} />
         <Buttons label="subtract" onClick={subtract} />
