@@ -1,7 +1,7 @@
 .App{
     margin-top: -22px;
     background: linear-gradient(to right, rgb(148, 67, 67), rgb(241, 134, 62));
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
