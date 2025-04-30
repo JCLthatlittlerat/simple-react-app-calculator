@@ -1,4 +1,5 @@
 import FeedBackForm from './components/controlled-elements/FeedBackForm';
+import MapFunctionDemo from './components/MapFunctionDemo';
 import './App.css';
 // import Header from './components/Header';
 // import Numbers from './components/Numbers';
@@ -10,7 +11,11 @@ import './App.css';
 function App() {
 
   return (
-    <FeedBackForm />
+    <div>
+      <FeedBackForm />
+      <MapFunctionDemo />
+
+    </div>
   );
 
 
