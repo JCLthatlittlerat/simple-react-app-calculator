@@ -31,7 +31,7 @@ function MapAndRender() {
 const topDesserts = data.map(dessert => {
     const listItem = `${dessert.title} - ${dessert.price}`;
     
-    return <li>{listItem}</li>
+    return <li >{listItem}</li>
     //This could be an alternative btw =>  
     // return <li>{`${dessert.title} - ${dessert.price}`}</li>      
     // just not using the variable at all and putting all the expressions inside the Curley-braces.
@@ -40,7 +40,7 @@ const topDesserts = data.map(dessert => {
   return (
     <div>
         <h3>Mapp Function and Rendering mapped data Demo</h3> 
-        <p>The following data demostrate the mapping of two differently indexed data that is the "tittle, 'Tiramisu' for example" and the "price, '$4.50' for example" that later on mapped together as required with the help of 'map()' function and get rendered as list of items , i.e li inside unordered list, i.e ol</p>
+        <p>The following data demostrate the mapping of two differently indexed data that is the "tittle, 'Tiramisu' for example" and the "price, '$5.00' for example" that later on mapped together as required with the help of 'map()' function and get rendered as list of items , i.e li inside unordered list, i.e ol</p>
         <ul>
         {topDesserts}
         </ul>

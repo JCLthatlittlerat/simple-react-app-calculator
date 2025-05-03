@@ -1,6 +1,7 @@
 import FeedBackForm from './components/controlled-elements/FeedBackForm';
 import MapFunctionDemo from './components/MapFunctionDemo';
 import MapAndRender from './components/MapAndRender';
+import KeysWithinListComponent from './components/KeysWithinListComponent'
 
 import './App.css';
 // import Header from './components/Header';
@@ -9,14 +10,53 @@ import './App.css';
 // import NameFormUncontrolled from "./components/controlled-elements/NameFormUncontrolled.jsx";
 // import NameFormControlled from "./components/controlled-elements/NameFormControlled.jsx";
 // import { useState } from 'react'; //for the 'NameFormControlled';
-
+import { useState } from 'react';
 function App() {
+  //'ToDo' app that was supposed to be used but replace by 'KeysWithinListComponent'
+  // const ToDo = props => {
+  //   <tr>
+  //     <td>
+  //       <label>{props.id}</label>
+  //     </td>
+  //     <td>
+  //       <input />
+  //     </td>
+  //     <td>
+  //       <label>{props.createdAt}</label>
+  //     </td>
+  //   </tr>
+  // }
+  const [todos, setTodos] = useState([{
+    id: 'todo1',
+    createdAt: '18:00',
+  }, {
+    id: 'todo2',
+    createdAt: '20:30'
+  }]);
+
+  const reverseOrder = () => {
+    setTodos([...todos].reverse())
+  }
 
   return (
     <div>
       <FeedBackForm />
       <MapFunctionDemo />
       <MapAndRender />
+      {/* part of the code used to demonestrate the 'keys' concept of rendering list items in components */}
+      <button onClick={reverseOrder}>Reverse</button>
+      <table>
+        <tbody>
+          {todos.map((todo, index) => (
+            <KeysWithinListComponent key={index} id={todo.id} createdAt={todo.createdAt} />
+          )
+          )}
+        </tbody>
+      </table>
+
+
+
+
 
     </div>
   );
