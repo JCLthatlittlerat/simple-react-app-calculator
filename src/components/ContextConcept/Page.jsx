@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Page() {
+    
   return (
     <div>
         <h2>What is Lorem Ipsum?</h2>
@@ -11,7 +12,9 @@ function Page() {
             suscipit molestias tempora rem ut maxime. Nulla sapiente officiis magni neque distinctio vitae nesciunt, 
             corporis nihil excepturi, maiores libero numquam nemo ad. Omnis repudiandae velit saepe modi suscipit libero 
             rerum sit est fuga inventore dolor nulla minima eveniet sed cupiditate similique at illo, repellendus quae 
-            distinctio perferendis, itaque necessitatibus delectus. Nostrum, impedit voluptatum?</p>
+            distinctio perferendis, itaque necessitatibus delectus. Nostrum, impedit voluptatum?
+        </p>
+        <p>Written by <span> </span></p>
     </div>
   )
 }

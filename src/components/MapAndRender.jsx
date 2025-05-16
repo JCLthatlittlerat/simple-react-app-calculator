@@ -28,10 +28,9 @@ function MapAndRender() {
         }
     ]
 
-const topDesserts = data.map(dessert => {
-    const listItem = `${dessert.title} - ${dessert.price}`;
-    
-    return <li >{listItem}</li>
+const topDesserts = data.map((dessert,index) => {
+       
+    return <li key={index}>{`${dessert.title} - ${dessert.price}`}</li>
     //This could be an alternative btw =>  
     // return <li>{`${dessert.title} - ${dessert.price}`}</li>      
     // just not using the variable at all and putting all the expressions inside the Curley-braces.

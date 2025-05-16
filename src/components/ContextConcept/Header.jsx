@@ -1,5 +1,5 @@
 import React from 'react'
-import LoggedInUser from './LoggedInUser';
+import LoggedInUser from './LoggedInUser'
 function Header() {
   return (
     <header>

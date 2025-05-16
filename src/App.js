@@ -2,6 +2,8 @@ import FeedBackForm from './components/controlled-elements/FeedBackForm';
 import MapFunctionDemo from './components/MapFunctionDemo';
 import MapAndRender from './components/MapAndRender';
 import KeysWithinListComponent from './components/KeysWithinListComponent'
+import Header from './components/ContextConcept/Header'
+import Page from './components/ContextConcept/Page'
 
 import './App.css';
 // import Header from './components/Header';
@@ -53,6 +55,12 @@ function App() {
           )}
         </tbody>
       </table>
+
+      <section>
+        <Header />
+        <Page />
+      </section>
+
 
 
 
