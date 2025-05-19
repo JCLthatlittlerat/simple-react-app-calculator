@@ -13,7 +13,7 @@
 
 // export const useUser = () => useContext(UserContext);
 
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 const UserContext = createContext(undefined);
 function UserProvider({children}){
     const [user] = useState({
@@ -29,5 +29,5 @@ return (
 
 }
 
-export const useUser = () => UserContext(UserContext);
+export const useUser = () => useContext(UserContext);
 export default UserProvider;

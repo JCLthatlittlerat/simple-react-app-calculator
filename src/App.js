@@ -13,6 +13,7 @@ import './App.css';
 // import NameFormControlled from "./components/controlled-elements/NameFormControlled.jsx";
 // import { useState } from 'react'; //for the 'NameFormControlled';
 import { useState } from 'react';
+import UserProvider from './components/ContextConcept/UserContext';
 function App() {
   //'ToDo' app that was supposed to be used but replace by 'KeysWithinListComponent'
   // const ToDo = props => {
@@ -55,12 +56,14 @@ function App() {
           )}
         </tbody>
       </table>
+      <UserProvider>
 
-      <section>
-        <Header />
-        <Page />
-      </section>
+        <section>
+          <Header />
+          <Page />
+        </section>
 
+      </UserProvider>
 
 
 

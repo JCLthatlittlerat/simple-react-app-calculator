@@ -1,7 +1,8 @@
 import React from 'react'
+import { useUser } from './UserContext'
 
 function Page() {
-    
+    const {user} = useUser()
   return (
     <div>
         <h2>What is Lorem Ipsum?</h2>
@@ -14,7 +15,7 @@ function Page() {
             rerum sit est fuga inventore dolor nulla minima eveniet sed cupiditate similique at illo, repellendus quae 
             distinctio perferendis, itaque necessitatibus delectus. Nostrum, impedit voluptatum?
         </p>
-        <p>Written by <span> </span></p>
+        <p>Written by <span>{user.name} </span></p>
     </div>
   )
 }
